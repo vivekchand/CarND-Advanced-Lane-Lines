@@ -37,9 +37,53 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
 
-You're reading it!
+Overall my pipeline has the following stages:
+1. Camera Calibration
+2. Un-distort Image
+3. Binary Thresholding
+4. Perspective Transform
+5. Locate Lanes
+6. Fit Lanes
+7. Draw Lanes
 
 ### Camera Calibration
+
+In this stage, series of chessboard images are read from camera_cal directory. 
+cv2.findChessBoardCorners() is used to find the x,y coordinates of each corner on a given image.
+WIth the array of corners, cv2.calibrateCamera() is used to calibrate camera matrix, distortion coefficients vector &
+the camera vectors of rotation & translation.
+
+### Un-distort Image
+
+After the camera is calibrated, we can apply camera matrix & distortion coefficients to correct the distortion effects 
+on camera input images. This is done using cv2.undistort().
+
+### Binary Thresholding
+
+Thresholding stage masks out pixels that are part of lanes & removes others. The steps are as follows:
+
+            |---> Convert Gray ---> Sobel X ---> Threshold Binary ---|
+            |                                                        |
+Input RGB --|                                                        |--> Combined Binary
+            |---> Convert HLS --------> InRange Binary --------------| 
+               
+### Perspective Transform
+
+This transforms the image into a bird's eye view. cv2.wrapPerspective() is used for this.   
+Preset coordinate list is used for perspective transform, cv2.getPerspectiveTransform() generates a perspective
+matrix.
+
+### Locate Lanes
+
+This stage extracts the actual lane pixels of left & right lanes. 
+
+### Fit Lanes
+
+### Draw Lanes
+
+Draw the detected lanes onto the undistorted image
+
+
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
