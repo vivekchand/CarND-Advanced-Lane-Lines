@@ -16,11 +16,11 @@ The goals / steps of this project are the following:
 
 
 [0_original_image]: ./output_images/0_original_image.png 
-[0_original_image]: ./output_images/1_undistorted_image.png 
-[0_original_image]: ./output_images/2_thresholded_image.png 
-[0_original_image]: ./output_images/3_perspective_transformed_image.png 
-[0_original_image]: ./output_images/4_final_image.png 
-[video1]: ./project_video.mp4.mp4 "Video"
+[1_undistorted_image]: ./output_images/1_undistorted_image.png 
+[2_thresholded_image]: ./output_images/2_thresholded_image.png 
+[3_perspective_transformed_image]: ./output_images/3_perspective_transformed_image.png 
+[4_final_image]: ./output_images/4_final_image.png 
+[video1]: ./project_video_processed.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -52,6 +52,12 @@ the camera vectors of rotation & translation.
 
 After the camera is calibrated, we can apply camera matrix & distortion coefficients to correct the distortion effects 
 on camera input images. This is done using cv2.undistort().
+
+Original Image:
+![Original Image][0_original_image]
+
+Un-distorted Image
+![Un-distorted Image][1_undistorted_image]
 
 ### Binary Thresholding
 
