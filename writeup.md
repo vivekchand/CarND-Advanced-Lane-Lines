@@ -20,6 +20,7 @@ The goals / steps of this project are the following:
 [2_thresholded_image]: ./output_images/2_thresholded_image.png 
 [3_perspective_transformed_image]: ./output_images/3_perspective_transformed_image.png 
 [4_final_image]: ./output_images/4_final_image.png 
+[camera_process]: ./examples/camera_process.png
 [video1]: ./project_video_processed.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -61,12 +62,9 @@ Un-distorted Image
 
 Thresholding stage masks out pixels that are part of lanes & removes others. The steps are as follows:
 
-            ---> Convert Gray ---> Sobel X ---> Threshold Binary ---
-            |                                                       |
-Input RGB --|                                                       |--> Combined Binary
-            |                                                       |
-            ---> Convert HLS --------> InRange Binary -------------- 
-               
+![Process][camera_process]
+
+
 ### Perspective Transform
 
 This transforms the image into a bird's eye view. cv2.wrapPerspective() is used for this.   
