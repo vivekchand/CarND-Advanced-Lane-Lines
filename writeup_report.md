@@ -40,9 +40,11 @@ After the camera is calibrated, we can apply camera matrix & distortion coeffici
 on camera input images. This is done using cv2.undistort().
 
 Original Image:
+
 ![Original Image][0_original_image]
 
-Un-distorted Image
+Un-distorted Image:
+
 ![Un-distorted Image][1_undistorted_image]
 
 
