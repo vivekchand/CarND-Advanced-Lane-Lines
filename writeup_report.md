@@ -2,7 +2,8 @@
 
 [//]: # (Image References)
 
-[chessboard]: ./camera_cal/calibration4.jpg 
+[original_chessboard_image]: ./output_images/original_chessboard_image.png 
+[undistorted_chessboard_image]: ./output_images/undistorted_chessboard_image.png 
 [0_original_image]: ./output_images/0_original_image.png 
 [1_undistorted_image]: ./output_images/1_undistorted_image.png 
 [2_thresholded_image]: ./output_images/2_thresholded_image.png 
@@ -27,11 +28,15 @@ Let's dive into each step in detail
 
 In this stage, series of chessboard images are read from camera_cal directory. 
 
-![Chessboard Image][chessboard]
+Original Chessboard image
+![Original Chessboard image][original_chessboard_image]
 
 cv2.findChessBoardCorners() is used to find the x,y coordinates of each corner on a given image.
 WIth the array of corners, cv2.calibrateCamera() is used to calibrate camera matrix, distortion coefficients vector &
 the camera vectors of rotation & translation.
+
+Undistorted Chessboard image
+![Undistorted Chessboard image][undistorted_chessboard_image]
 
 
 ## 2. Un-distort Image
