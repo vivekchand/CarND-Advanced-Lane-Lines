@@ -29,6 +29,7 @@ Let's dive into each step in detail
 In this stage, series of chessboard images are read from camera_cal directory. 
 
 Original Chessboard image
+
 ![Original Chessboard image][original_chessboard_image]
 
 cv2.findChessBoardCorners() is used to find the x,y coordinates of each corner on a given image.
@@ -36,6 +37,7 @@ WIth the array of corners, cv2.calibrateCamera() is used to calibrate camera mat
 the camera vectors of rotation & translation.
 
 Undistorted Chessboard image
+
 ![Undistorted Chessboard image][undistorted_chessboard_image]
 
 
