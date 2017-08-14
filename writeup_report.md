@@ -113,3 +113,8 @@ The final output looks like this:
 
 ![Final Image][4_final_image]
 
+## Issues & Improvements
+
+The current pipeline does not work well for the challenge video. Would have to do some changes to Binary Thresholding stage.
+Also the src & dst coordinates used for perspective transform are hardcoded, they should be programatically computed.
+
