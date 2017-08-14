@@ -8,5 +8,5 @@
 
 [Output Video](project_video_processed.mp4) -- advanced lane lines detection output
 
-[![Video](https://img.youtube.com/vi/L6bTyXaWh8M/0.jpg)](https://www.youtube.com/watch?v=L6bTyXaWh8M)
+[![Video](https://img.youtube.com/vi/j1gve_fewYE/0.jpg)](https://www.youtube.com/watch?v=j1gve_fewYE)
 
